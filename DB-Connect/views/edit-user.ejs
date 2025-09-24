@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>Update User Details</h2>
+        <form action="/update-user/<%= user.id %>" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>Firstname:</td>
+                    <td><input type="text" name="firstname" value="<%= user.firstname %>" /></td>
+                </tr>
+                <tr>
+                    <td>Lastname:</td>
+                    <td><input type="text" name="lastname" value="<%= user.lastname %>" /></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" value="<%= user.email %>" /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" value="<%= user.password %>" /></td>
+                </tr>
+                <tr>
+                    <td>MobileNo:</td>
+                    <td><input type="number" name="mobileNo" value="<%= user.mobileNo %>" /></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><input type="radio" name="gender" value="Male" <% if(user.gender=="Male" ) {%> checked <% } %>
+                            /> Male </td>
+                    <td><input type="radio" name="gender" value="Female" <% if(user.gender=="Female" ) {%> checked <% }
+                            %> />Female</td>
+                </tr>
+                <tr>
+                    <td>ProfileImage:</td>
+                    <td><input type="file" name="profile"></td>
+                    <td><img src="<%= user.profile %>" alt="img" width="100px"></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Update User"></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+
+</html>

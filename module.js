@@ -29,7 +29,7 @@
 
             // export default {addition , product}; //default export(es-6)
 
-            // export const square=(n)=> n**2;  //named export (es-6)
+        //     export const square=(n)=> n**2;  //named export (es-6)
 
 
 
